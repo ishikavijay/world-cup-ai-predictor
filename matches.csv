@@ -1,0 +1,13 @@
+team1,team2,team1_rank,team2_rank,team1_form,team2_form,result
+Brazil,Argentina,1,2,4,3,team1
+France,Germany,3,11,4,2,team1
+Argentina,France,2,3,3,4,team2
+Germany,Brazil,11,1,2,5,team2
+Spain,France,8,3,4,4,draw
+Brazil,Spain,1,8,5,3,team1
+Germany,Spain,11,8,2,4,team2
+Argentina,Germany,2,11,4,2,team1
+Brazil,France,1,3,5,4,team1
+Spain,Argentina,8,2,3,4,team2
+France,Spain,3,8,4,3,team1
+Germany,Argentina,11,2,2,5,team2
