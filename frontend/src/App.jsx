@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 
+const API_URL =
+  window.location.hostname === "localhost"
+    ? "http://127.0.0.1:8000"
+    : "https://world-cup-ai-predictor-eakk.onrender.com";
+
+
 function App() {
   const [team1, setTeam1] = useState("");
   const [team2, setTeam2] = useState("");
@@ -27,7 +33,7 @@ function App() {
     async function loadModelPerformance() {
       try {
         const response = await fetch(
-          "http://127.0.0.1:8000/model-performance"
+          `${API_URL}/model-performance`
         );
 
         if (!response.ok) {
@@ -52,7 +58,7 @@ function App() {
   async function getTeamStats(team, setStats) {
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/stats/${encodeURIComponent(team)}`
+        `${API_URL}/stats/${encodeURIComponent(team)}`
       );
 
       if (!response.ok) {
@@ -107,7 +113,7 @@ function App() {
 
     try {
       const url =
-        `http://127.0.0.1:8000/predict` +
+        `${API_URL}/predict` +
         `?team1=${encodeURIComponent(team1)}` +
         `&team2=${encodeURIComponent(team2)}` +
         `&team1_rank=${Number(team1Rank)}` +
