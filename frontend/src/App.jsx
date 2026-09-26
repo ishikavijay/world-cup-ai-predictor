@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import "./App.css";
 
 const API_URL =
-  window.location.hostname === "localhost"
+  window.location.hostname === "localhost" ||
+  window.location.hostname === "127.0.0.1"
     ? "http://127.0.0.1:8000"
     : "https://world-cup-ai-predictor-eakk.onrender.com";
-
 
 function App() {
   const [team1, setTeam1] = useState("");
